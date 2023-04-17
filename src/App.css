@@ -1,0 +1,582 @@
+/* Import font from Google Fonts API */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;800&display=swap');
+
+/* Variables */
+:root {
+  --aqua: #199fb1;
+  --aqua-light: #1db5c9;
+  --aqua-dark: #127a88;
+  --gray: #ddd;
+  --gray-light: #f5f5f5;
+  --gray-dark: #b1b1b1;
+  --gray-darker: #a5a5a5;
+  --darkgray: #333;
+  --darkgray-light: #444;
+  --darkgray-dark: #222;
+  --darkgray-darker: #111;
+}
+/* Resize grabber */
+::-webkit-resizer { 
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid var(--aqua);
+  border-left: 100px solid transparent;
+}
+
+/* Text selection */
+::-moz-selection {
+  background: var(--aqua);
+  color: var(--gray-light);
+  transition: background-color 0.2s ease-in-out;
+}
+
+::selection {
+  background: var(--aqua-light);
+  color: var(--gray-light);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--aqua);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--aqua-dark);
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'Cascadia Mono SemiBold';
+  src: url('./fonts/Cascadia Mono PL SemiBold 600.otf') format('otf');
+}
+
+/* Global styles */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* HTML tags */
+body {
+  font-family: 'Heebo', sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: inherit;
+  padding: 0.5rem;
+  border: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  transition: border-color 0.2s ease-in-out;
+  background-color: var(--gray-light);
+}
+
+.NewNote input {
+  margin: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+}
+
+.NewNote textarea {
+  margin: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  font-size: .95rem;
+}
+
+input:hover,
+textarea:hover {
+  border-color: var(--gray-dark);
+  background-color: var(--gray);
+  transition: border-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--aqua);
+  background-color: var(--gray);
+}
+
+button {
+  display: block;
+  font-size: 1rem;
+  background-color: var(--gray);
+  border: none;
+  border-radius: 50%;
+  padding: .75rem;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--aqua);
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--gray);
+  border-radius: .75rem;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: var(--gray-light);
+  margin: 0;
+  padding: 1.5rem;
+  position: fixed;
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: normal;
+  color: var(--aqua);
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--aqua-dark);
+}
+
+span {
+  color: var(--aqua);
+  transition: color 0.2s ease-in-out;
+}
+
+span:hover {
+  color: var(--aqua-dark);
+}
+
+code {
+  font-family: Cascadia Mono SemiBold;
+  background-color: var(--gray);
+  color: var(--darkgray);
+  padding: 0.25rem;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  transition: background-color 0.2s ease-in-out;
+}
+
+footer {
+  display: flex;
+  align-content: center;
+  padding: 1rem;
+  background-color: var(--gray);
+  height: 5rem;
+}
+
+/* Classes */
+.App {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.Notes {
+  margin-top: 6rem;
+}
+
+.Note {
+  margin-top: 10rem;
+}
+
+.NewNote {
+  min-width: 800px;
+}
+
+.Container {
+  display: flex;
+  flex-direction: row;
+}
+
+.textBtn {
+  background: var(--aqua);
+  color: var(--gray-light);
+  border-radius: 0;
+  font-family: Cascadia Mono SemiBold, monospace;
+  padding: .5rem;
+}
+
+.textBtn:hover {
+  background: var(--aqua-dark);
+  color: var(--gray-light);
+  transition: all 0.2s ease-in-out;
+}
+
+.anchorBtn {
+  padding: 0;
+  border-radius: 0;
+  font-family: Cascadia Mono SemiBold, monospace;
+  color: var(--aqua);
+  background: 0;
+}
+
+.anchorBtn:hover {
+  color: var(--aqua-dark);
+  background: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebarNotes {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray-light);
+  width: 25rem;
+  height: 100%;
+}
+
+.sidebarBtn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-radius: 0;
+}
+
+.sidebarNote .sidebarBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--gray-light);
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.sidebarNote:hover .sidebarBtn:hover {
+  background-color: var(--gray);
+  transition: background-color 0.1s ease-in-out;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  max-width: 800px;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray-light);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.flexEnd {
+  display: flex;
+  align-items: flex-end;
+  align-self: flex-end;
+  gap: .5rem;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.markdown {
+  line-height: 1.5;
+}
+
+.markdown h1 {
+  font-size: 2rem;
+}
+
+.markdown h2 {
+  font-size: 1.5rem;
+}
+
+.markdown h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.logo {
+  font-family: Cascadia Mono SemiBold;
+  background-color: var(--aqua);
+  color: var(--gray-light);
+  transition: background-color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+.logo:hover {
+  background-color: var(--gray-light);
+  color: var(--aqua);
+}
+
+.icoBtnRed {
+  border-radius: 0;
+  background: 0;
+  margin: 0;
+  margin-right: 1rem;
+  padding: 0;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  font-size: 20px;
+  color: rgb(221, 26, 26);
+}
+
+.icoBtnRed:hover {
+  background: 0;
+  color: rgb(170, 38, 38);
+  transition: all .2s ease-in-out;
+}
+
+.icoBtn {
+  border-radius: 0;
+  background: 0;
+  margin: 0;
+  margin-right: 1rem;
+  padding: 0;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  font-size: 20px;
+}
+
+.icoBtn:hover {
+  background: 0;
+  color: var(--aqua-light);
+  transition: all .2s ease-in-out;
+}
+
+.noteBtn {
+  border-radius: 5px;
+  background-color: white;
+  text-align: left;
+  margin: 0;
+  padding: 5px;
+}
+
+.noteBtn:hover {
+  background-color: var(--gray-light);
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Dark mode */
+.DarkMode {
+  background-color: var(--darkgray-dark);
+  color: var(--gray-light);
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode code {
+  background-color: var(--darkgray-light);
+  color: var(--gray-light);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.DarkMode input,
+.DarkMode textarea {
+  background: var(--darkgray-dark);
+  color: var(--gray-light);
+  border-color: var(--darkgray);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.DarkMode input:hover,
+.DarkMode textarea:hover {
+  background-color: var(--darkgray);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.DarkMode input:focus,
+.DarkMode textarea:focus {
+  background-color: var(--darkgray);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.DarkMode button {
+  background-color: var(--darkgray-light);
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode button:hover {
+  background-color: var(--aqua);
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode nav {
+  background-color: var(--darkgray-dark);
+  box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode hr {
+  border: 1px solid var(--darkgray-light);
+  border-radius: .75rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode footer {
+  background-color: var(--darkgray-light);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Dark mode text transitions */
+.DarkMode p,
+.DarkMode h1,
+.DarkMode h2,
+.DarkMode h3,
+.DarkMode h4,
+.DarkMode h5,
+.DarkMode h6,
+.DarkMode li,
+.DarkMode a,
+.DarkMode span,
+.DarkMode label,
+.DarkMode textarea,
+.DarkMode button,
+.DarkMode nav,
+.DarkMode footer {
+  transition: color 0.1s ease-in-out;
+}
+
+/* Dark mode classes */
+.DarkMode .note {
+  background-color: var(--darkgray);
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode .logo {
+  background-color: var(--darkgray-light);
+  color: var(--aqua);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.DarkMode .logo:hover {
+  background-color: var(--aqua);
+  color: var(--darkgray);
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode .textBtn {
+  color: var(--gray-light);
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode .textBtn:hover {
+  color: var(--aqua);
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode .anchorBtn:hover {
+  color: var(--aqua-dark);
+  background: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode .icoBtnRed {
+  background: 0;
+}
+
+.DarkMode .icoBtnRed:hover {
+  background: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode .icoBtn {
+  background: 0;
+  color: var(--gray-light)
+}
+
+.DarkMode .icoBtn:hover {
+  background: 0;
+  color: var(--aqua);
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode .sidebarBtn {
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode .sidebarNote .sidebarBtn {
+  background-color: var(--darkgray);
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode .sidebarNote:hover .sidebarBtn:hover {
+  background-color: var(--darkgray-light);
+  transition: all 0.2s ease-in-out;
+}
+
+.DarkMode .sidebarNotes {
+  background-color: var(--darkgray);
+  transition: all 0.1s ease-in-out;
+}
+
+.DarkMode .noteBtn {
+  border-radius: 5px;
+  background-color: var(--darkgray-dark);
+  color: white;
+  text-align: left;
+  margin: 0;
+  padding: 5px;
+}
+
+.DarkMode .noteBtn:hover {
+  background-color: var(--darkgray);
+  transition: background-color 0.2s ease-in-out;
+}
