@@ -1,5 +1,6 @@
-/* Import font from Google Fonts API */
+/* Import fonts from Google Fonts API */
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&display=swap');
 
 /* Variables */
 :root {
@@ -50,12 +51,6 @@
 
 ::-webkit-scrollbar-thumb:active {
   background: var(--aqua-dark);
-}
-
-/* Fonts */
-@font-face {
-  font-family: 'Cascadia Mono SemiBold';
-  src: url('./fonts/Cascadia Mono PL SemiBold 600.otf') format('otf');
 }
 
 /* Global styles */
@@ -200,7 +195,8 @@ span:hover {
 }
 
 code {
-  font-family: Cascadia Mono SemiBold;
+  font-family: Chivo Mono, monospace;
+  font-weight: 600;
   background-color: var(--gray);
   color: var(--darkgray);
   padding: 0.25rem;
@@ -243,7 +239,8 @@ footer {
   background: var(--aqua);
   color: var(--gray-light);
   border-radius: 0;
-  font-family: Cascadia Mono SemiBold, monospace;
+  font-family: Chivo Mono SemiBold, monospace;
+  font-weight: 600;
   padding: .5rem;
 }
 
@@ -256,7 +253,8 @@ footer {
 .anchorBtn {
   padding: 0;
   border-radius: 0;
-  font-family: Cascadia Mono SemiBold, monospace;
+  font-family: Chivo Mono SemiBold, monospace;
+  font-weight: 600;
   color: var(--aqua);
   background: 0;
 }
@@ -354,7 +352,8 @@ footer {
 }
 
 .logo {
-  font-family: Cascadia Mono SemiBold;
+  font-family: Chivo Mono SemiBold, monospace;
+  font-weight: 600;
   background-color: var(--aqua);
   color: var(--gray-light);
   transition: background-color 0.4s ease-in-out;

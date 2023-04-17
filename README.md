@@ -34,6 +34,7 @@ This project was built using:
 - [ReactJS](https://react.dev/)
 - [react-markdown](https://www.npmjs.com/package/react-markdown)
 - [react-modal](https://www.npmjs.com/package/react-modal)
+- [Google Fonts](https://fonts.google.com/)
 - Icons provided by [React Icons](https://www.npmjs.com/package/react-icons):
     - [Feather Icons](https://feathericons.com/)
     - [Font Awesome 5](https://fontawesome.com/)
