@@ -1,6 +1,8 @@
-# Notate
+# 🔗 [Notate](https://notate-quinceyvd.netlify.app/)
 
 Notate is a simple note-taking app that lets you create, edit, and format notes using markdown syntax. As this has mainly been a front-end project, localStorage has been utilized for the storing of the notes.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9143b238-fb3a-47b0-ada8-9d9568cb9590/deploy-status)](https://notate-quinceyvd.netlify.app/)
 
 ## 📦 Installation
 1. Clone the repository
