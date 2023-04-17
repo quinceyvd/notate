@@ -58,7 +58,7 @@ function HowToUse() {
                     </p>
                     <h4><a href="https://www.github.com/quinceyvd/notate"><FaGithub /> GitHub repo</a></h4>
                     <hr />
-                    <button class="textBtn" onClick={closeModal}>close</button>
+                    <button class="textBtn" onClick={closeModal}>Close</button>
                 </Modal>
             </>
         );
@@ -104,7 +104,7 @@ function HowToUse() {
                     </p>
                     <h4><a href="https://www.github.com/quinceyvd/notate"><FaGithub /> GitHub repo</a></h4>
                     <hr />
-                    <button class="textBtn" onClick={closeModal}>close</button>
+                    <button class="textBtn" onClick={closeModal}>Close</button>
                 </Modal>
             </>
         );

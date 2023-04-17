@@ -93,7 +93,7 @@ function HowToUse() {
                         The buttons in the interface are provided with titles. So if the user hovers over them, a button's use will be displayed.
                     </p>
                     <hr />
-                    <button class="textBtn" onClick={closeModal}>close</button>
+                    <button class="textBtn" onClick={closeModal}>Close</button>
                 </Modal>
             </>
         );
@@ -173,7 +173,8 @@ function HowToUse() {
                         The highlighted note view is the main interface for viewing, editing and deleting notes.
                         The buttons in the interface are provided with titles. So if the user hovers over them, a button's use will be displayed.
                     </p>
-                    <button class="textBtn" onClick={closeModal}>close</button>
+                    <hr />
+                    <button class="textBtn" onClick={closeModal}>Close</button>
                 </Modal>
             </>
         );
