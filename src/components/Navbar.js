@@ -11,7 +11,7 @@ function Navbar(props) {
 
     return (
         <nav>
-            <a href="index.js">
+            <a href="index.html">
                 <h1 style={{fontSize: '1.5rem'}} className="logo">notate.</h1>
             </a>
             <div className="flexRow">
